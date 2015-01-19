@@ -1,0 +1,46 @@
+<%= render "shared/menu" %>
+<h1>Sign Up!</h1>
+
+<%= @user.errors.full_messages %>
+
+
+
+<%= form_for @user do |f| %>
+
+<div>
+	<%= f.label :name %>
+	<%= f.text_field :name %>
+</div>
+
+<div>
+	<%= f.label :email %>
+	<%= f.text_field :email %>
+</div>
+
+<div>
+	<%= f.label :address %>
+	<%= f.text_field :address %>
+</div>
+
+<div>
+	<%= f.label :bins %>
+	<%= f.text_field :bins %>
+</div>				
+
+<div>
+	<%= f.label :password %>
+	<%= f.password_field :password %>
+</div>
+
+<div>
+	<%= f.label :password_confirmation %>
+	<%= f.password_field :password_confirmation %> 
+</div>
+
+<div>
+	<%= f.submit "Sign Up!" %>
+</div>
+
+<% end %>
+
+

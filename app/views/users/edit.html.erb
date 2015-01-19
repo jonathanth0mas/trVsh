@@ -1,0 +1,60 @@
+<%= render "shared/menu" %>
+<h1>Schedule a Pickup!</h1>
+
+<div class="signForm" class="container">
+	<%= form_for @user do |f| %>
+	<div>
+		<%= f.label :name %>
+		<%= f.text_field :name %>
+	</div>
+
+	<div>
+		<%= f.label :email %>
+		<%= f.text_field :email %>
+	</div>
+
+	<div>
+		<%= f.label :address %>
+		<%= f.text_field :address %>
+	</div>
+
+	<div>
+		<%= f.label :bins %>
+		<%= f.text_field :bins %>
+	</div>
+
+	<div>
+		<%= f.label :material %>
+		<%= f.text_field :material %>
+	</div>
+<!-- only works in chrome for now -->
+	  <script>
+	  
+	  $(function() {
+	    $( "#datepicker" ).datepicker();
+	    minDate: 0
+	    dateFormat: 'dd-mm-YYYY'
+	  });
+	   
+	  </script>
+	 
+	<div>
+		<%= f.label :date %>
+		<%= f.date_field :date, placeholder: 'Enter date for pickup..' %>
+	</div>
+
+	<%= f.submit "Submit these changes!" %>
+	<% end %>
+</div>	
+
+
+
+
+
+
+
+
+
+
+
+
